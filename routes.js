@@ -25,6 +25,12 @@ app.get("/gaze", (req, res) => {
     );
 });
 
+ws.on("connection", (ws) => {
+    ws.on("message", (data) => {
+        //여기다가 유니티에서 오는 데이터 처리하면 됨 분기하던가
+    });
+});
+
 app.listen(app.get("port"), () => {
     console.log(
         "Express server listening on port " +
