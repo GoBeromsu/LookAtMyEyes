@@ -67,10 +67,10 @@ export default function App() {
 
   // Open sidenav when mouse enter on mini sidenav
   const handleOnMouseEnter = () => {
-    if (miniSidenav && !onMouseEnter) {
-      setMiniSidenav(dispatch, false);
-      setOnMouseEnter(true);
-    }
+    // if (miniSidenav && !onMouseEnter) {
+    //   setMiniSidenav(dispatch, false);
+    //   setOnMouseEnter(true);
+    // }
   };
 
   // Close sidenav when mouse leave mini sidenav
@@ -136,7 +136,7 @@ export default function App() {
     <CacheProvider value={rtlCache}>
       <ThemeProvider theme={themeRTL}>
         <CssBaseline />
-        {layout === "dashboard" && (
+        {/* {layout === "dashboard" && (
           <>
             <Sidenav
               color={sidenavColor}
@@ -149,7 +149,7 @@ export default function App() {
             <Configurator />
             {configsButton}
           </>
-        )}
+        )} */}
         {layout === "vr" && <Configurator />}
         <Routes>
           {getRoutes(routes)}
@@ -162,19 +162,18 @@ export default function App() {
       <CssBaseline />
       {layout === "dashboard" && (
         <>
-          <Sidenav
+          {/* <Sidenav
             color={sidenavColor}
             brand={brand}
             brandName="Soft UI Dashboard"
             routes={routes}
             onMouseEnter={handleOnMouseEnter}
             onMouseLeave={handleOnMouseLeave}
-          />
+          /> */}
           <Configurator />
           {configsButton}
         </>
       )}
-      {layout === "vr" && <Configurator />}
       <Routes>
         {getRoutes(routes)}
         <Route path="*" element={<Navigate to="/dashboard" />} />
