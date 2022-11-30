@@ -13,12 +13,6 @@ connection.connect((err) => {
     }
 });
 
-connection.query("SELECT * from gaze", (err, rows) => {
-    if (err) {
-        console.log(err);
-    }
-    // console.log("Current Table Info is: ", rows);
-});
 // connection.query(
 //     "INSERT INTO gaze(name,code,intense) VALUES ('berom', '1','0')",
 //     (err, rows) => {
@@ -28,49 +22,5 @@ connection.query("SELECT * from gaze", (err, rows) => {
 //         }
 //     }
 // );
-// connection.query(
-//     "INSERT INTO gaze(name,code,intense) VALUES ('berom', '1','1')",
-//     (err, rows) => {
-//         if (err) {
-//             console.log(err);
-//             //
-//         }
-//     }
-// );
-// connection.query(
-//     "INSERT INTO gaze(name,code,intense) VALUES ('berom', '1','0')",
-//     (err, rows) => {
-//         if (err) {
-//             console.log(err);
-//             //
-//         }
-//     }
-// );
-// connection.query(
-//     "INSERT INTO gaze(name,code,intense) VALUES ('berom', '1','0')",
-//     (err, rows) => {
-//         if (err) {
-//             console.log(err);
-//             //
-//         }
-//     }
-// );
-// connection.query(
-//     "INSERT INTO gaze(name,code,intense) VALUES ('berom', '1','1')",
-//     (err, rows) => {
-//         if (err) {
-//             console.log(err);
-//             //
-//         }
-//     }
-// );
-// connection.query(
-//     "INSERT INTO gaze(name,code,intense) VALUES ('berom', '1','0')",
-//     (err, rows) => {
-//         if (err) {
-//             console.log(err);
-//             //
-//         }
-//     }
-// );
+
 module.exports = connection;
