@@ -23,8 +23,7 @@ import SoftTypography from "components/SoftTypography";
 
 // Soft UI Dashboard React examples
 import DashboardLayout from "examples/LayoutContainers/DashboardLayout";
-import DashboardNavbar from "examples/Navbars/DashboardNavbar";
-import Footer from "examples/Footer";
+
 import MiniStatisticsCard from "examples/Cards/StatisticsCards/MiniStatisticsCard";
 
 import GradientLineChart from "examples/Charts/LineCharts/GradientLineChart";
@@ -44,6 +43,9 @@ function Dashboard() {
 
   return (
     <DashboardLayout>
+                <Typography align="center" gutterBottom variant="h2" component="div">
+            {"kidName"+"의 학습일지"} 
+          </Typography>
       <SoftBox py={3}>
         <SoftBox mb={3}>
           <Grid container spacing={2}>
@@ -72,29 +74,37 @@ function Dashboard() {
       />    
       </div>
           <Typography align="center" gutterBottom variant="h3" component="div">
-            아이
+            {"NAME"}
           </Typography>
           <Typography align="center" variant="body2" color="text.secondary">
-            응애
+            {"comment"}
           </Typography>
         </CardContent>
       </CardActionArea>
     </Card>
             </Grid>
-            <Grid item xs={12} sm={12} xl={6}>
+            <Grid item xs={12} sm={12} xl={4}>
               <MiniStatisticsCard
-                title={{ text: "오늘 아이의 집중도" }}
-                count="$53,000"
-                percentage={{ color: "success", text: "+55%" }}
-                icon={{ color: "info", component: "paid" }}
+                title={{ name: "kidName", text: "의 집중 시간" }}
+                count={"20 m" + " 20 s"}
+                // percentage={{ color: "success", text: "+55%" }}
+                icon={{ color: "info", component: "edit" }}
               />
             </Grid>
-            <Grid item xs={12} sm={12} xl={6}>
+            <Grid item xs={12} sm={12} xl={4}>
               <MiniStatisticsCard
-                title={{ text: "아이의 머시기" }}
-                count="2,300"
-                percentage={{ color: "success", text: "+3%" }}
-                icon={{ color: "info", component: "public" }}
+                title={{ name: "kidName", text: "의 집중력이 흐트러진 시간" }}
+                count={"20 m" + " 20 s"}
+                // percentage={{ color: "success", text: "+3%" }}
+                icon={{ color: "info", component: "outlet" }}
+              />
+            </Grid>
+            <Grid item xs={12} sm={12} xl={4}>
+              <MiniStatisticsCard
+                title={{ name: "mediaName", text: "의 영상길이" }}
+                count={"time"}
+                // percentage={{ color: "success", text: "+3%" }}
+                icon={{ color: "info", component: "alarm" }}
               />
             </Grid>
           </Grid>
@@ -105,18 +115,18 @@ function Dashboard() {
 
             <Grid item xs={12} lg={12}>
               <GradientLineChart
-                title="아이의 집중도 변화 그래프"
+                title="아이의 집중도 변화"
                 description={
                   <SoftBox display="flex" alignItems="center">
                     <SoftBox fontSize={size.lg} color="success" mb={0.3} mr={0.5} lineHeight={0}>
-                      <Icon className="font-bold">arrow_upward</Icon>
+                      {/* <Icon className="font-bold">arrow_upward</Icon> */}
                     </SoftBox>
-                    <SoftTypography variant="button" color="text" fontWeight="medium">
+                    {/* <SoftTypography variant="button" color="text" fontWeight="medium">
                       4% more{" "}
                       <SoftTypography variant="button" color="text" fontWeight="regular">
                         in 2022
                       </SoftTypography>
-                    </SoftTypography>
+                    </SoftTypography> */}
                   </SoftBox>
                 }
                 height="20.25rem"

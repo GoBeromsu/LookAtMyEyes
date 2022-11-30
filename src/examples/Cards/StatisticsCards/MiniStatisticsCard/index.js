@@ -60,6 +60,7 @@ function MiniStatisticsCard({ bgColor, title, count, percentage, icon, direction
                   textTransform="capitalize"
                   fontWeight={title.fontWeight}
                 >
+                  {title.name}
                   {title.text}
                 </SoftTypography>
                 <SoftTypography
@@ -107,6 +108,7 @@ MiniStatisticsCard.defaultProps = {
   bgColor: "white",
   title: {
     fontWeight: "medium",
+    name: "",
     text: "",
   },
   percentage: {
@@ -130,6 +132,7 @@ MiniStatisticsCard.propTypes = {
   ]),
   title: PropTypes.PropTypes.shape({
     fontWeight: PropTypes.oneOf(["light", "regular", "medium", "bold"]),
+    name: PropTypes.string,
     text: PropTypes.string,
   }),
   count: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
