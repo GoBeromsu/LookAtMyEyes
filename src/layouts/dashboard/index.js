@@ -35,11 +35,12 @@ import typography from "assets/theme/base/typography";
 import reportsBarChartData from "layouts/dashboard/data/reportsBarChartData";
 import gradientLineChartData from "layouts/dashboard/data/gradientLineChartData";
 import { Avatar, Card, CardActionArea, CardContent, CardMedia, Typography } from "@mui/material";
-
+import kidData from "./data/reportsData";
 
 function Dashboard() {
   const { size } = typography;
-  const { chart, items } = reportsBarChartData;
+  const {kidName} = kidData.name;
+  
 
   return (
     <DashboardLayout>
@@ -85,7 +86,7 @@ function Dashboard() {
             </Grid>
             <Grid item xs={12} sm={12} xl={4}>
               <MiniStatisticsCard
-                title={{ name: "kidName", text: "의 집중 시간" }}
+                title={{ name: "sdf", text: "의 집중 시간" }}
                 count={"20 m" + " 20 s"}
                 // percentage={{ color: "success", text: "+55%" }}
                 icon={{ color: "info", component: "edit" }}
@@ -93,7 +94,7 @@ function Dashboard() {
             </Grid>
             <Grid item xs={12} sm={12} xl={4}>
               <MiniStatisticsCard
-                title={{ name: "kidName", text: "의 집중력이 흐트러진 시간" }}
+                title={{ name: "d", text: "의 집중력이 흐트러진 시간" }}
                 count={"20 m" + " 20 s"}
                 // percentage={{ color: "success", text: "+3%" }}
                 icon={{ color: "info", component: "outlet" }}
@@ -101,8 +102,8 @@ function Dashboard() {
             </Grid>
             <Grid item xs={12} sm={12} xl={4}>
               <MiniStatisticsCard
-                title={{ name: "mediaName", text: "의 영상길이" }}
-                count={"time"}
+                title={{ name: "d", text: "의 집중 흐트러진 횟수" }}
+                count={"cnt"}
                 // percentage={{ color: "success", text: "+3%" }}
                 icon={{ color: "info", component: "alarm" }}
               />
